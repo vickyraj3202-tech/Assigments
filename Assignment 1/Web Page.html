@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+
+    <style>
+        /* Basic page settings */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            color: #333;
+        }
+
+        /* Header: logo on left, social links on right */
+        header {
+            background-color: #234567;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-links a {
+            color: white;
+            margin-right: 12px;
+        }
+
+        /* Menu bar */
+        nav {
+            background-color: #162d44;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 25px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar and main content sit beside each other */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Sidebar */
+        aside {
+            width: 220px;
+            flex-shrink: 0;
+            background-color: #dce7f2;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        aside ul {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+        /* Main content takes the remaining space */
+        main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Container for the three boxes */
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Each content box */
+        .box {
+            flex: 1 1 200px;
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .box img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .box p {
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #234567;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* On small screens, put the sidebar above the content */
+        @media (max-width: 700px) {
+            .container {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body id="home">
+
+    <!-- HEADER -->
+    <header>
+        <a href="#home" class="logo"> Vicky - Tech - Discovery</a>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/provedbyvicky?dlrf=ZDNlZDc0MzIxNw==">Instagram</a>
+            <a href="https://www.facebook.com/provedbyvicky?rdid=IJuyDaPQb1w68tMd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1DF9iGqL1Z%2F#">Facebook</a>
+            <a href="https://www.youtube.com/@provedbyvicky">YouTube</a>
+        </div>
+    </header>
+
+    <!-- MENU BAR -->
+    <nav aria-label="Main menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- SIDEBAR AND MAIN CONTENT -->
+    <div class="container">
+
+        <aside id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am a student learning web development.</p>
+
+            <h3>My Interests</h3>
+            <ul>
+                <li>Coding</li>
+                <li>Web Design</li>
+                <li>Content Creation</li>
+                <li>Music</li>
+            </ul>
+        </aside>
+
+        <main id="services">
+            <h1>Welcome to My Website</h1>
+            <p>These are some of the things I am learning.</p>
+
+            <div class="boxes">
+
+                <!-- BOX 1 -->
+                <article class="box">
+                    <h2>HTML</h2>
+                    <img
+                        src="https://placehold.co/400x250/dce7f2/234567?text=HTML"
+                        alt="HTML illustration"
+                    >
+                    <p>
+                        HTML creates the structure of a webpage.
+                        We use it to add headings, paragraphs,
+                        images, and links.
+                    </p>
+                </article>
+
+                <!-- BOX 2 -->
+                <article class="box">
+                    <h2>CSS</h2>
+                    <img
+                        src="https://placehold.co/400x250/e1f0df/315c2b?text=CSS"
+                        alt="CSS illustration"
+                    >
+                    <p>
+                        CSS styles a webpage. We use it to change
+                        colours, fonts, spacing, and the layout
+                        of different sections.
+                    </p>
+                </article>
+
+                <!-- BOX 3 -->
+                <article class="box">
+                    <h2>Web Design</h2>
+                    <img
+                        src="https://placehold.co/400x250/ffecd6/754719?text=Web+Design"
+                        alt="Web design illustration"
+                    >
+                    <p>
+                        Web design helps us create pages that
+                        look attractive and are easy for
+                        visitors to use.
+                    </p>
+                </article>
+
+            </div>
+        </main>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <p>Contact: vickyraj3202@gmail.com</p>
+        <p>&copy; 2026 MyWebsite. Created for my HTML and CSS assignment.</p>
+    </footer>
+
+</body>
+</html>

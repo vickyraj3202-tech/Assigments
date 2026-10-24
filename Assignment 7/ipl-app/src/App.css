@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 24px;
+  background: white;
+  color: black;
+  font-family: "Times New Roman", serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+table {
+  border-spacing: 12px 8px;
+}
+
+th,
+td {
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+td {
+  text-align: left;
+}
+
+#root {
+  overflow-x: auto;
+}
